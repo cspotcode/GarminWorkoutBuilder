@@ -1,0 +1,42 @@
+﻿@page "/build"
+@inject IJSRuntime JS
+@using Dynastream.Fit
+@using BlazorMonaco
+@using BlazorMonaco.Editor
+@using BlazorMonaco.Languages
+
+<PageTitle>Build Workout</PageTitle>
+
+<h1>Build Workout</h1>
+
+<p role="message">Current message: @message</p>
+
+<button class="btn btn-primary" @onclick="Generate">Generate</button>
+
+<StandaloneCodeEditor Id="code-editor" @ref="editor" ConstructionOptions="EditorConstructionOptions" />
+
+@code {
+    private int currentCount = 0;
+    private string message = "hello";
+    private StandaloneCodeEditor? editor;
+
+    private async void Generate()
+    {
+        currentCount++;
+
+        message = await (await editor!.GetModel()).GetValue(EndOfLinePreference.LF, false);
+
+        // Functions.Generate(out message, out var base64);
+
+        // await JS.InvokeVoidAsync("InteropFunctions.saveFile", new object[] { "workout.fit", base64 });
+    }
+
+    private StandaloneEditorConstructionOptions EditorConstructionOptions(StandaloneCodeEditor editor)
+    {
+        return new StandaloneEditorConstructionOptions
+        {
+            AutomaticLayout = true,
+            Language = "yaml"
+        };
+    }
+}

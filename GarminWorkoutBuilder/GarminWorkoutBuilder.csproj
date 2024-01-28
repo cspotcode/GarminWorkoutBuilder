@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    <TypeScriptToolsVersion>5.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ts\functions.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorMonaco" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.1" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FitSDKRelease_21.126.00\cs\fitsdk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+  
+  <Target Name="NPM Build" AfterTargets="PreBuildEvent">
+    <PropertyGroup>
+      <Command>
+        npx esbuild --bundle --sourcemap --outdir=wwwroot/js ./ts/main.ts ./node_modules/monaco-yaml/yaml.worker.js
+      </Command>
+    </PropertyGroup>
+    <Exec Command="$(Command)" />
+  </Target>
+</Project>

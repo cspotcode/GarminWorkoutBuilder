@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$ref": "#/definitions/Workout",
+    "definitions": {
+        "Workout": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "exercises": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/Exercise"
+                            },
+                            {
+                                "$ref": "#/definitions/SuperSet"
+                            }
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "title",
+                "exercises"
+            ],
+            "additionalProperties": false
+        },
+        "Exercise": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "$ref": "#/definitions/ExerciseName"
+                },
+                "garminName": {
+                    "$ref": "#/definitions/ExerciseName"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "reps": {
+                    "type": "number"
+                },
+                "duration": {
+                    "type": "string"
+                },
+                "rest": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "additionalProperties": false
+        },
+        "ExerciseName": {
+            "type": "string"
+        },
+        "SuperSet": {
+            "type": "object",
+            "properties": {
+                "repeat": {
+                    "type": "number"
+                },
+                "exercises": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Exercise"
+                    }
+                }
+            },
+            "required": [
+                "repeat",
+                "exercises"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

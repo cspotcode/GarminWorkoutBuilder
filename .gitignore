@@ -1,0 +1,11 @@
+/.vs
+bin
+obj
+/GarminWorkoutBuilder/node_modules
+/FitSDK*
+/GarminWorkoutBuilder/publish
+*.csproj.user
+*.pubxml.user
+/GarminWorkoutBuilder/ts/**/*.js
+/GarminWorkoutBuilder/ts/**/*.js.map
+/GarminWorkoutBuilder/wwwroot/js

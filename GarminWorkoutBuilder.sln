@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GarminWorkoutBuilder", "GarminWorkoutBuilder\GarminWorkoutBuilder.csproj", "{56C1B141-1957-4701-9524-BB8FE2A01C96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fitsdk", "FitSDKRelease_21.126.00\cs\fitsdk.csproj", "{1FDE9803-5BBD-4902-A1F3-EA7F7971429A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSandbox", "ConsoleSandbox\ConsoleSandbox.csproj", "{244BD84E-F08C-45B7-9356-AA615CD73548}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56C1B141-1957-4701-9524-BB8FE2A01C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C1B141-1957-4701-9524-BB8FE2A01C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C1B141-1957-4701-9524-BB8FE2A01C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C1B141-1957-4701-9524-BB8FE2A01C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FDE9803-5BBD-4902-A1F3-EA7F7971429A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FDE9803-5BBD-4902-A1F3-EA7F7971429A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FDE9803-5BBD-4902-A1F3-EA7F7971429A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FDE9803-5BBD-4902-A1F3-EA7F7971429A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{244BD84E-F08C-45B7-9356-AA615CD73548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244BD84E-F08C-45B7-9356-AA615CD73548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244BD84E-F08C-45B7-9356-AA615CD73548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244BD84E-F08C-45B7-9356-AA615CD73548}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20C7A50C-053E-4879-A408-34F99D479314}
+	EndGlobalSection
+EndGlobal
