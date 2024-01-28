@@ -9,3 +9,4 @@ obj
 /GarminWorkoutBuilder/ts/**/*.js
 /GarminWorkoutBuilder/ts/**/*.js.map
 /GarminWorkoutBuilder/wwwroot/js
+/local-ignored
